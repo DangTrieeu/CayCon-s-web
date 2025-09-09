@@ -42,7 +42,7 @@ const Cart = () => {
 
       console.log('Calling /api/vnpay with:', { orderId, amount: totalVND, orderInfo });
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'}/api/vnpay`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'https://trieungu.io.vn'}/api/vnpay`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ orderId, amount: totalVND, orderInfo }),
